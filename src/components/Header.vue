@@ -145,7 +145,7 @@ export default {
                         text-transform: uppercase;
                         transition: .3s ease;
                         &.active {
-                            color: #ff8724;
+                            color: #f0f0f0;
                             &::before {
                                 visibility: visible;
                                 opacity: 1;
@@ -159,7 +159,7 @@ export default {
                         }
                         &:hover {
                             background: none;
-                            color: #ff8724;
+                            color: #f0f0f0;
                             outline: none;
                             &::before {
                                 visibility: visible;
@@ -174,15 +174,15 @@ export default {
                         }
                         &::before{
                             @include rim;
-                            border-left: 1px solid #FF8724;
-                            border-top: 1px solid #FF8724;
+                            border-left: 1px solid #f0f0f0;
+                            border-top: 1px solid #f0f0f0;
                             top: 0;
                             left: -70px;
                         }
                         &::after {
                             @include rim;
-                            border-right: 1px solid #FF8724;
-                            border-bottom: 1px solid #FF8724;
+                            border-right: 1px solid #f0f0f0;
+                            border-bottom: 1px solid #f0f0f0;
                             bottom: 0;
                             right: 70px;
                         }

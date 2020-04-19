@@ -12,7 +12,7 @@
             <div class="foot-middle">
                 <h2>联系我们</h2>
                 <ul>
-                    <li style="color: #FF8724;">
+                    <li style="color: #f0f0f0;">
                         <span style="float:left;margin-right: 8px;"><i class="el-icon-location-outline"></i></span>
                         <div style="display: inline-block;">
                           湖南省长沙市雨花区德思勤创业大街<br>A3栋1309室
@@ -187,7 +187,7 @@ export default {
                             text-decoration: none;
                             transition: all .3s;
                             &:hover {
-                                color:#FF8724;
+                                color:#f0f0f0;
                                 transform: scale(1.2);
                             }
                         }

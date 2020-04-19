@@ -22,8 +22,8 @@ export default {
         return {
             header_color: '',   // header背景色
             header_position: '',    // header定位
-            header_hover: '',       // header图标是否显示白光划过效果
-            show_backtop: false,    // 是否显示回到顶部按钮
+            header_hover: true,       // header图标是否显示白光划过效果
+            show_backtop: true,    // 是否显示回到顶部按钮
         }
     },
     mounted(){
@@ -50,7 +50,7 @@ export default {
             this.header_hover = val[1];
         }
     }
-  
+
 }
 </script>
 <style lang="scss">

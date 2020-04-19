@@ -23,7 +23,7 @@
       </li>
     </ul>
     <div class="home-service">
-      <h1>精选高端面料，特约行业资深审计师</h1>
+      <h1>精选高端面料，特约行业资深设计师</h1>
       <p>客户涵盖国内多家百强企业，值得信赖</p>
       <ul>
         <li v-for="(item,index) in services" :key="index">
@@ -41,7 +41,9 @@
         <h1>合作伙伴</h1>
         <ul>
           <li v-for="item in 6" :key="item">
-            <img :src="`../../../static/img/friends/clients-logo0${item}.png`">
+            <!--img :src="`../../../static/img/friends/clients-logo0${item}.png`" -->
+            <img :src="`../../../static/img/friends/clients-logo01.png`">
+
           </li>
         </ul>
       </div>
@@ -139,7 +141,7 @@
       position: absolute;
     }
     &::after {
-      background: #FF8724 none repeat scroll 0 0 padding-box content-box;
+      background: #f0f0f0 none repeat scroll 0 0 padding-box content-box;
       border-bottom: 1px solid #DADADA;
       border-left: 1px solid #DADADA;
       bottom: -10px;

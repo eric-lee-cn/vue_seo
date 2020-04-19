@@ -2,8 +2,8 @@
     <div class="product">
         <figure>
             <figcaption>
-                <h1>产品中心</h1><br>
-                <p>强大产品矩阵，助力综合能源服务创新升级，如智能产品、能效产品、软件产品...</p>
+                <h1>男士西装</h1><br>
+                <p>湖南黑格服装有限公司主要从事企业商务工装定做，行政制服定做，员工工装定做。公司主要产品定位于“时尚职业装”，能够兼顾穿着之人的职业所需、舒适程度和潮流追求。</p>
             </figcaption>
             <img src="../../../static/img/head-view/about-header-bg.jpg" width="100%" height="555px">
         </figure>
@@ -40,22 +40,22 @@ export default {
                 {
                     kind: 0,
                     title: '所有',
-                    color: '#2F4056'
+                    color: '#f0f0f0'
                 },
                 {
                     kind: 1,
-                    title: '智能产品',
-                    color: '#009688'
+                    title: '男士西装',
+                    color: '#f0f0f0'
                 },
                 {
                     kind: 2,
-                    title: '能效',
-                    color: '#5FB878'
+                    title: '女士西装',
+                    color: '#f0f0f0'
                 },
                 {
                     kind: 3,
-                    title: '新能源',
-                    color: '#ff8724'
+                    title: '工装',
+                    color: '#f0f0f0'
                 }
             ],
             products: [
@@ -63,37 +63,37 @@ export default {
                     id: 1,
                     kind: 1,
                     img: 'work01.jpg',
-                    title: '智能用电终端'
+                    title: '商务正装'
                 },
                 {
                     id: 2,
                     kind: 2,
-                    img: 'work02.jpg',
-                    title: 'NX301型电力能效监测终端'
+                    img: 'work01.jpg',
+                    title: '商务正装'
                 },
                 {
                     id: 3,
                     kind: 3,
-                    img: 'work03.jpg',
-                    title: '优电宝-Ι节电器'
+                    img: 'work01.jpg',
+                    title: '商务正装'
                 },
                 {
                     id: 4,
                     kind: 2,
-                    img: 'work04.jpg',
-                    title: '智慧水务管控一体化平台'
+                    img: 'work01.jpg',
+                    title: '商务正装'
                 },
                 {
                     id: 5,
                     kind: 3,
-                    img: 'work05.jpg',
-                    title: '基于用户蓄电池分布式储能服务平台'
+                    img: 'work01.jpg',
+                    title: '商务正装'
                 },
                 {
                     id: 6,
                     kind: 3,
-                    img: 'work06.jpg',
-                    title: '需求侧能源管控平台'
+                    img: 'work01.jpg',
+                    title: '商务正装'
                 }
             ],
             copy_products: []
@@ -122,7 +122,7 @@ export default {
             }
         }
     }
-  
+
 }
 </script>
 <style lang="scss" scoped>
@@ -188,7 +188,7 @@ export default {
                         }
                     }
                 }
-                
+
             }
 
         }
@@ -228,7 +228,7 @@ export default {
                         margin-top: 5%;
                     }
                 }
-            } 
+            }
         }
     }
 // 动画
