@@ -2,7 +2,7 @@
     <header :style="{backgroundColor: bg_color, position: hd_position}">
         <div>
             <div :class="{img_hover: hover_flag}" class="web_icon">
-                <img src="../../static/img/brand-logo.png" alt="官网" @click="toHome">
+                <img src="../../static/img/brand-heige.png" alt="官网" @click="toHome">
             </div>
             <ul>
                 <li v-for="(item,index) in titleList" :key="index" @click="selected(item.title)">
@@ -53,11 +53,11 @@ export default {
                 {
                     title: '关于我们',
                     link: '#'       // '/about'
-                },
+                }/*,
                 {
                     title: '500',
                     link: '/error-500'
-                }
+                }*/
             ]
 
         }

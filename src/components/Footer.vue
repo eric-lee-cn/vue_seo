@@ -25,13 +25,14 @@
                 </ul>
             </div>
             <div class="foot-right">
-                <h2>概览</h2>
-                <ul>
+                <h2>关注我们</h2>
+              <!--  <ul>
                     <li v-for="(item,index) in viewList" :key="index">
                         <router-link :to="item.link"><img :src="'../../static/img/foot-view/'+item.path" /></router-link>
                     </li>
-                </ul>
-                <h5><router-link to="">View More >></router-link></h5>
+                </ul>-->
+                <el-image src="../../static/img/contact/wechat.jpg"></el-image>
+               <!-- <h5><router-link to="">扫码关注</router-link></h5>-->
             </div>
         </div>
         <div class="foot-bottom">
@@ -226,7 +227,7 @@ export default {
                 h5 {
                     text-align: right;
                     a {
-                    color: #5FB878;
+                    color: #f0f0f0;
                         text-decoration: none;
                     }
                 }

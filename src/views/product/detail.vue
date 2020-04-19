@@ -5,7 +5,8 @@
                 <h1>男士西装</h1><br>
                 <p></p>
             </figcaption>
-            <img :src="`../../../static/img/product/work0${$route.params.id}.jpg`" width="100%" height="500px">
+           <!-- <img :src="`../../../static/img/product/work0${$route.params.id}.jpg`" width="100%" height="500px">-->
+           <img :src="`../../../static/img/product/work01.jpg`" width="100%" height="500px">
         </figure>
         <div class="detail-content">
             <div class="detail-block">

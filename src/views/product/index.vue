@@ -40,22 +40,22 @@ export default {
                 {
                     kind: 0,
                     title: '所有',
-                    color: '#f0f0f0'
+                    color: '#3F3F3F'
                 },
                 {
                     kind: 1,
                     title: '男士西装',
-                    color: '#f0f0f0'
+                    color: '#3F3F3F'
                 },
                 {
                     kind: 2,
                     title: '女士西装',
-                    color: '#f0f0f0'
+                    color: '#3F3F3F'
                 },
                 {
                     kind: 3,
                     title: '工装',
-                    color: '#f0f0f0'
+                    color: '#3F3F3F'
                 }
             ],
             products: [

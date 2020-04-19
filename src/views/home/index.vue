@@ -64,19 +64,19 @@
           {
             title: '实力，让情怀落地',
             abstract: '黑格服装，您的服装管家',
-            img: 'slider01.jpg',
+            img: 'slider-1.jpg',
             link: ''
           },
           {
             title: '不喧哗，自有声',
             abstract: '黑格服装',
-            img: 'slider02.jpg',
+            img: 'slider-2.jpg',
             link: ''
           },
           {
             title: '赢不是全部，想要赢才是。',
             abstract: '黑格服装',
-            img: 'slider03.jpg',
+            img: 'slider-3.jpg',
             link: ''
           }
         ],
