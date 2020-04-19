@@ -186,8 +186,8 @@
       }
 
       .slider-button {
-        background-color: #FE8724;
-        border-color: #FE8724;
+        background-color: #3F3F3F;
+        border-color: #3F3F3F;
         color: #ffffff;
         width: 180px;
         height: 40px;

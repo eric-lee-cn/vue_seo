@@ -12,16 +12,16 @@
             <div class="foot-middle">
                 <h2>联系我们</h2>
                 <ul>
-                    <li style="color: #f0f0f0;">
+                    <li style="color: #969595;">
                         <span style="float:left;margin-right: 8px;"><i class="el-icon-location-outline"></i></span>
                         <div style="display: inline-block;">
                           湖南省长沙市雨花区德思勤创业大街<br>A3栋1309室
                         </div>
                     </li>
-                    <li style="color: #67C23A;"><i class="el-icon-phone"></i>电话：0731-85010094</li>
-                   <li style="color: #67C23A;"><i class="el-icon-phone"></i>手机：18142669830</li>
-                   <li style="color: #67C23A;"><i class="el-icon-phone"></i>手机：13544178551（微信同号）</li>
-                    <li style="color: #009688;"><i class="el-icon-printer"></i>邮箱：670582942@qq.com</li>
+                    <li style="color: #969595;"><i class="el-icon-phone"></i>电话：0731-85010094</li>
+                   <li style="color: #969595;"><i class="el-icon-phone"></i>手机：18142669830</li>
+                   <li style="color: #969595;"><i class="el-icon-phone"></i>手机：13544178551（微信同号）</li>
+                    <li style="color: #969595;"><i class="el-icon-printer"></i>邮箱：670582942@qq.com</li>
                 </ul>
             </div>
             <div class="foot-right">
