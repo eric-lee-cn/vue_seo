@@ -27,12 +27,14 @@
       <p>客户涵盖国内多家百强企业，值得信赖</p>
       <ul>
         <li v-for="(item,index) in services" :key="index">
-          <div class="service-box">
-            <img :src="`../../../static/img/services/${index+1}.png`">
-            <div class="service-info"><p>{{ item.info }}</p></div>
+          <div class="product-box">
+          <img :src="`../../../static/img/services/${index+1}.png`">
+            <div class="product-info">
+              <p class="product-title">{{ item.title }}</p>
+              <br/>
+              <p class="product-content">{{ item.info }}</p>
+            </div>
           </div>
-          <br>
-          <p>{{ item.title }}</p>
         </li>
       </ul>
     </div>
@@ -99,7 +101,7 @@
         services: [
           {
             title: '男士西装',
-            info: '“时尚男装，休闲西服，商务正装，满足您的多样需求'
+            info: '时尚男装，休闲西服，商务正装，满足您的多样需求'
           },
           {
             title: '女士西装',
@@ -289,45 +291,36 @@
       grid-template-columns: repeat(3, 33.33333%);
 
       li {
-        .service-box {
-          margin-left: 50%;
-          transform: translateX(-50%);
-          display: flex;
+        .product-box {
+          margin-left: 15%;
+          display: block;
+          width: 300px;
+          height: 500px;
+          border-radius: 5%;
+          box-shadow: 5px 5px 2px #888888;
           overflow: hidden;
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
 
-          img, .service-info {
-            transition: all 0.4s ease-in-out 0s;
+          img:hover {
+            transform: scale(1.1);
           }
-
-          &:hover {
-            img, .service-info {
-              transform: translateX(-80%);
-            }
-          }
-
           img {
             width: 100%;
-            height: auto;
+            height: 70%;
+            transition:1s;
+            overflow: hidden;
           }
-
-          .service-info {
-            width: 80%;
-            height: 100%;
-            background: #f1f1f1;
-            padding: 20% 25% 0 5%;
-            position: absolute;
-            top: 0;
-            right: -110%;
-
-            p {
-              font-weight: 600;
+          .product-info {
+            margin-top: 5%;
+            .product-title{
+              color: #8c939d;
+            }
+            .product-content{
+              color: #3F3F3F;
             }
           }
         }
       }
+
     }
   }
 
