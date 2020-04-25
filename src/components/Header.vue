@@ -1,9 +1,10 @@
 <template>
     <header :style="{backgroundColor: bg_color, position: hd_position}">
         <div>
-            <div :class="{img_hover: hover_flag}" class="web_icon">
-                <img src="../../static/img/brand-heige.png" alt="官网" @click="toHome">
+            <div :class="{img_hover: hover_flag}" class="web_icon" >
+                <img src="../../static/img/brand-heige.png" alt="定制西装" @click="toHome" style="width: 0.5vm; height: 1vm">
             </div>
+
             <ul>
                 <li v-for="(item,index) in titleList" :key="index" @click="selected(item.title)">
                     <router-link :to="item.link" :class="{active: active == item.title}">{{ item.title }}</router-link>
@@ -39,20 +40,24 @@ export default {
                     link: '/home'
                 },
                 {
-                    title: '男士西装',
+                    title: '团体定制',
                     link: '/product'
                 },
                 {
-                    title: '女士西装',
-                    link: '#'        // '/solution'
+                    title: '私享定制',
+                    link: '#'
                 },
                 {
-                    title: '客户案例',
-                    link: '#'        // '/customer'
+                    title: '合作案例',
+                    link: '#'
+                },
+                {
+                title: '新闻资讯',
+                link: '#'
                 },
                 {
                     title: '关于我们',
-                    link: '#'       // '/about'
+                    link: '#'
                 }/*,
                 {
                     title: '500',
@@ -126,6 +131,7 @@ export default {
             }
             ul {
                 font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+                font-size: 1vm;
                 font-weight: bold;
                 display: flex;
                 list-style: none;
@@ -163,12 +169,12 @@ export default {
                             outline: none;
                             &::before {
                                 visibility: visible;
-                                opacity: 1;
+                                opacity: 100;
                                 left: 0;
                             }
                             &::after {
                                 visibility: visible;
-                                opacity: 1;
+                                opacity: 100;
                                 right: 0;
                             }
                         }

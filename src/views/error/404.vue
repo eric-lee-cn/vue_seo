@@ -6,7 +6,7 @@
                 404<br>
                 Looks like you got lost.
             </h1>
-            <img src="../../../static/img/error/404.gif">
+            <!--<img src="../../../static/img/error/404.gif">-->
         </section>
     </main>
 </template>

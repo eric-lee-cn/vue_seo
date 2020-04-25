@@ -1,19 +1,21 @@
 <template>
+
   <div>
-    <el-carousel trigger="click" height="500px" @change="loadAnimate">
+    <el-carousel trigger="click" :height="bannerh"  @change="loadAnimate">
       <el-carousel-item v-for="(item,index) in sliderList" :key="index">
         <figure>
-          <img :src="'../../static/img/slider/'+item.img" width="100%"/>
+          <img :src="'../../static/img/slider/'+item.img" width="100%" alt="高端西服定制"/>
           <figcaption>
             <h1 :class="{ bounceInDown:slider_index==index }">{{ item.title }}</h1><br>
             <p :class="{ fadeInUp:slider_index==index }">{{ item.abstract }}</p><br>
             <router-link :to="item.link">
-              <el-button class="slider-button" round :class="{ fadeInUp:slider_index==index }">了解详情 >></el-button>
+              <el-button class="slider-button" round :class="{ fadeInUp:slider_index==index }" >了解详情 >></el-button>
             </router-link>
           </figcaption>
         </figure>
       </el-carousel-item>
     </el-carousel>
+
     <ul class="home-kind">
       <li v-for="(item,index) in kind" :key="index">
         <h3>{{ item.title }}
@@ -22,9 +24,12 @@
         <p>{{ item.info }}</p>
       </li>
     </ul>
+    <!-- 品类 --->
     <div class="home-service">
+      <div style="height: 10vm;">
       <h1>精选高端面料，特约行业资深设计师</h1>
       <p>客户涵盖国内多家百强企业，值得信赖</p>
+      </div>
       <ul>
         <li v-for="(item,index) in services" :key="index">
           <div class="product-box">
@@ -38,25 +43,28 @@
         </li>
       </ul>
     </div>
+    <!-- 品类 end-->
+
     <div class="home-friends">
       <div class="friends-container">
         <h1>合作伙伴</h1>
         <ul>
-          <li v-for="item in 6" :key="item">
+          <li v-for="item in 5" :key="item">
             <!--img :src="`../../../static/img/friends/clients-logo0${item}.png`" -->
-            <img :src="`../../../static/img/friends/clients-logo01.png`">
-
+            <img :src="`../../../static/img/friends/clients-logo01.png`" alt="保利物业" style="width: 80px; height: 80px">
           </li>
         </ul>
       </div>
     </div>
+
   </div>
+
 </template>
 <script>
-  import {home} from '../../http/home';
 
   export default {
     name: "Home",
+    bannerh: '500px',
     data() {
       return {
         slider_index: 0,
@@ -109,26 +117,34 @@
           },
           {
             title: '工装',
-            info: '支持保洁服，厨师服，工程服，物业安保服，文化衫等各类工装定制'
+            info: '支持保洁，厨师服，工程服，物业安保服，文化衫等'
           }
         ]
       }
     },
     created() {
       this.$emit('headFix', ['fixed', false]);
-      // home()
-      // .then(data=>{
-      //     console.log(data)
-      // })
-      // .catch(err => {
-      //     this.$message.error(err.message);
-      // });
     },
     methods: {
       loadAnimate(index) {
         this.slider_index = index;
       }
+    },
+    //设置banner高度自适应
+    beforeMount() {
+      let that = this;
+        // 通过捕获系统的onresize事件触发我们需要执行的事件
+        var w = window.innerWidth;
+        let h;
+        if (w > 1180) {
+          h = 500
+        } else {
+          h = 0.31 * w
+        }
+        that.bannerh = h + 'px';
+        console.log(that.bannerh)
     }
+
   }
 </script>
 <style lang="scss" scoped>
@@ -170,30 +186,29 @@
 
     figcaption {
       bottom: 0;
-      left: 6%;
+      left: 3%;
       margin: 0 auto;
       position: absolute;
       right: 6%;
       top: 40%;
-      width: 1170px;
-      padding: 0 15px;
+      width: 100%;
+      padding: 0 10%;
 
       h1 {
-        font-size: 46px;
+        font-size: 2vm;
       }
 
       p {
-        font-size: 18px;
-        font-weight: 400;
+        font-size: 1.5vm;
       }
 
       .slider-button {
         background-color: #3F3F3F;
         border-color: #3F3F3F;
         color: #ffffff;
-        width: 180px;
-        height: 40px;
-        font-size: 18px;
+        width: 1vm;
+        height: 1vm;
+        font-size: 1vw;
         transition: transform 2s;
 
         &:hover {
@@ -293,9 +308,9 @@
       li {
         .product-box {
           margin-left: 15%;
-          display: block;
-          width: 300px;
-          height: 500px;
+          display: inline-block;
+          width: 10vm;
+          height: 25vm;
           border-radius: 5%;
           box-shadow: 5px 5px 2px #888888;
           overflow: hidden;
@@ -305,7 +320,7 @@
           }
           img {
             width: 100%;
-            height: 70%;
+            height: 30%;
             transition:1s;
             overflow: hidden;
           }
@@ -316,6 +331,7 @@
             }
             .product-content{
               color: #3F3F3F;
+              height: 10vm;
             }
           }
         }
@@ -345,8 +361,8 @@
     }
 
     .friends-container {
-      padding-right: 15px;
-      padding-left: 15px;
+      padding-right: 8%;
+      padding-left: 8%;
       position: relative;
 
       h1 {
@@ -372,7 +388,8 @@
         display: flex;
         margin-top: 5%;
         position: absolute;
-        margin-left: 50%;
+        margin-left: 42%;
+        margin-right: 42%;
         transform: translateX(-50%);
       }
     }

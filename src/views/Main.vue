@@ -4,19 +4,16 @@
         <router-view @headFix="head_fix"></router-view>
         <self-footer></self-footer>
         <div class="backtop" @click="backTop" v-show="show_backtop"><i class="el-icon-arrow-up"></i></div>
-        <!--<self-loading></self-loading>-->
     </div>
 </template>
 <script>
 import selfHeader from '../components/Header'
 import selfFooter from '../components/Footer'
-import selfLoading from '../components/loading'
 
 export default {
     components:{
         selfHeader,
         selfFooter,
-        //selfLoading
     },
     data(){
         return {
