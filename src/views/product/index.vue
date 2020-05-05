@@ -5,11 +5,11 @@
                 <h1>男士西装</h1><br>
                 <p>湖南黑格服装有限公司主要从事企业商务工装定做，行政制服定做，员工工装定做。公司主要产品定位于“时尚职业装”，能够兼顾穿着之人的职业所需、舒适程度和潮流追求。</p>
             </figcaption>
-            <img src="../../../static/img/head-view/about-header-bg.jpg" width="100%" height="555px">
+            <img src="../../../static/img/head-view/about-header-bg.jpg" width="100%" height="10%">
         </figure>
         <ul class="category" :class="{fix: fix}">
             <li v-for="(item,index) in category" :key="index">
-                <div class="outcircle" :style="{backgroundColor: item.color}" @click="selected(item)">
+                <div class="outcircle" @click="selected(item)">
                     {{ item.title }}
                     <div class="incircle" :class="{active: active == item.title}"></div>
                 </div>
@@ -147,43 +147,36 @@ export default {
             z-index: 2;
         }
         .category {
-            height: 15vh;
             padding: 1% 25% 0;
             display: grid;
             grid-template-columns: repeat(4, 25%);
-            background-color: rgba(0,0,0,.5);      // #393D49;
-            margin-top: -1%;
+            margin-top: -6%;
             li {
+                z-index: 99;
                 position: relative;
                 .outcircle {
-                    width: 50%;
-                    height: 80%;
-                    border-radius: 50%;
-                    color: #ffffff;
-                    line-height: 12vh;
+                    color: white;
+                    line-height: 4em;
                     position: relative;
                     cursor: pointer;
                     transition: all .5s;
                     &:hover {
-                        width: 60%;
-                        height: 100%;
-                        line-height: 15vh;
-                        font-size: 18px;
+                        background-color: #BD395B;
                     }
                     .incircle {
-                        width: 80%;
-                        height: 80%;
                         position: absolute;
                         left: 0;
                         top: 0;
                         right: 0;
                         bottom: 0;
-                        border-radius: 50%;
+                        font-size: 1.5em;
                         margin: auto;
                         border: 0px solid transparent;
+                        opacity: 0.2;
+                        background-color: black;
                         &.active {
-                            color: rgba(255,255,255,.4);
-                            border: 3px solid rgba(255,255,255,.4);
+                            color: white;
+                            //border: 3px solid rgba(255,255,255,.4);
                             animation: self-zoomIn .5s linear;
                         }
                     }

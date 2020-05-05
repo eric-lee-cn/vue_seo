@@ -57,7 +57,7 @@ export default {
     .backtop {
         width: 60px;
         height: 25px;
-        background-color: rgb(255,135,36);
+        background-color: rgb(9, 132, 227);
         text-align: center;
         position: fixed;
         z-index: 999;
