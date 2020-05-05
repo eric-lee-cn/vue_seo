@@ -24,6 +24,13 @@ Vue.component('chart', ECharts)
 // 引入mqtt
 import './mq'
 
+//引入 bootstrap start
+import $ from 'jquery'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min'
+//引入 bootstrap end
+
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

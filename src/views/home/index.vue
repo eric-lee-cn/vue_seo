@@ -5,13 +5,14 @@
       <el-carousel-item v-for="(item,index) in sliderList" :key="index">
         <figure>
           <img :src="'../../static/img/slider/'+item.img" width="100%" alt="高端西服定制"/>
+          <!--轮播图跳出文字
           <figcaption>
             <h1 :class="{ bounceInDown:slider_index==index }">{{ item.title }}</h1><br>
             <p :class="{ fadeInUp:slider_index==index }">{{ item.abstract }}</p><br>
             <router-link :to="item.link">
               <el-button class="slider-button" round :class="{ fadeInUp:slider_index==index }" >了解详情 >></el-button>
             </router-link>
-          </figcaption>
+          </figcaption>-->
         </figure>
       </el-carousel-item>
     </el-carousel>
@@ -24,26 +25,85 @@
         <p>{{ item.info }}</p>
       </li>
     </ul>
-    <!-- 品类 --->
-    <div class="home-service">
-      <div style="height: 10vm;">
-      <h1>精选高端面料，特约行业资深设计师</h1>
-      <p>客户涵盖国内多家百强企业，值得信赖</p>
-      </div>
-      <ul>
-        <li v-for="(item,index) in services" :key="index">
-          <div class="product-box">
-          <img :src="`../../../static/img/services/${index+1}.png`">
-            <div class="product-info">
-              <p class="product-title">{{ item.title }}</p>
-              <br/>
-              <p class="product-content">{{ item.info }}</p>
+
+    <el-container>
+      <el-main>
+        <!-- 品类 --->
+        <div class="home-service">
+          <h1>精选高端面料，特约行业资深设计师</h1>
+          <p>客户涵盖国内多家百强企业，值得信赖</p>
+
+          <el-row>
+            <el-col :span="24">
+              <ul>
+                <li v-for="(item,index) in services" :key="index">
+                  <div class="product-box">
+                    <img :src="`../../../static/img/services/${index+1}.png`">
+                    <div class="product-info">
+                      <p class="product-title">{{ item.title }}</p>
+                      <br/>
+                      <p class="product-content">{{ item.info }}</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </el-col>
+          </el-row>
+
+        </div>
+        <!-- 品类 end-->
+
+        <!--news start-->
+        <br/><br/>
+        <el-row>
+          <el-col :span="6" :offset="6">
+           <h2>行业知识</h2>
+          </el-col>
+          <el-col :span="6">
+           <h2>新闻动态</h2>
+          </el-col>
+        </el-row>
+
+        <el-row type="flex" justify="start" class="news-content">
+          <el-col :span="6" :offset="6" :pull="2" style="height: 4em; ">
+            <div style="display: inline-block; vertical-align:middle">
+              <ul>
+                <li>
+                  <div class="in-line" style="display: inline-block; vertical-align:middle; margin-bottom: -1.5em">
+                    <div class="time" style="display: inline-block; vertical-align:middle">
+                      <div class="day" style="font-size: 2em; color: #b6b6b6;line-height: 1em;">04</div>
+                      <div style="font-size: 0.5em; color: #b6b6b6; ">2020-05</div>
+                    </div>
+                    <div class="news-title" style="display: inline-block; margin-left: 1em; font-size: 1em;vertical-align:middle; text-align: left;"><a href="#" style="color: #303E4F;">这里是标题啊啊试测试测试驱蚊器二无沃翁啊</a></div>
+                  </div>
+                  <el-divider style="margin-bottom: -1em;"></el-divider>
+                </li>
+              </ul>
             </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <!-- 品类 end-->
+          </el-col>
+
+          <el-col :span="6" :push="2" style="height: 3em">
+            <div style="display: inline-block; vertical-align:middle;float: left">
+              <ul>
+                <li>
+                  <div class="in-line" style="display: inline-block; vertical-align:middle; margin-bottom: -1.5em;">
+                    <div class="time" style="display: inline-block; vertical-align:middle;align-content: flex-start">
+                      <div class="day" style="font-size: 2em; color: #b6b6b6;line-height: 1em;">04</div>
+                      <div style="font-size: 0.5em; color: #b6b6b6; ">2020-05</div>
+                    </div>
+                    <div class="news-title" style="display: inline-block; margin-left: 1em; font-size: 1em;vertical-align:middle;text-align: left;"><a href="#" style="color: #303E4F;">这里是标题啊啊测试沃尔沃若翁</a></div>
+                  </div>
+                  <el-divider style="margin-bottom: -1em;"></el-divider>
+                </li>
+              </ul>
+            </div>
+          </el-col>
+        </el-row>
+        <!--news end-->
+
+      </el-main>
+    </el-container>
+
 
     <div class="home-friends">
       <div class="friends-container">
@@ -72,19 +132,19 @@
           {
             title: '实力，让情怀落地',
             abstract: '黑格服装，您的服装管家',
-            img: 'slider-1.jpg',
+            img: 'slider01.jpg',
             link: ''
           },
           {
             title: '不喧哗，自有声',
             abstract: '黑格服装',
-            img: 'slider-2.jpg',
+            img: 'slider02.jpg',
             link: ''
           },
           {
             title: '赢不是全部，想要赢才是。',
             abstract: '黑格服装',
-            img: 'slider-3.jpg',
+            img: 'slider03.jpg',
             link: ''
           }
         ],
@@ -128,23 +188,30 @@
     methods: {
       loadAnimate(index) {
         this.slider_index = index;
-      }
+      },
     },
     //设置banner高度自适应
     beforeMount() {
-      let that = this;
-        // 通过捕获系统的onresize事件触发我们需要执行的事件
-        var w = window.innerWidth;
-        let h;
-        if (w > 1180) {
-          h = 500
-        } else {
-          h = 0.31 * w
-        }
-        that.bannerh = h + 'px';
-        console.log(that.bannerh)
+      setHeightbyWindow(this);
+    },
+    mounted() {
+      // 通过捕获系统的onresize事件触发重新设置banner高度
+      window.onresize =function seth(){
+      setHeightbyWindow(this);
+      }
     }
+  }
 
+  function setHeightbyWindow(that){
+    let w = window.innerWidth;
+    let h;
+    if (w > 1180) {
+      h = 500
+    } else {
+      h = 0.31 * w
+    }
+    that.bannerh = h + 'px';
+    console.log(that.bannerh)
   }
 </script>
 <style lang="scss" scoped>
@@ -195,11 +262,11 @@
       padding: 0 10%;
 
       h1 {
-        font-size: 2vm;
+        font-size: 1vm;
       }
 
       p {
-        font-size: 1.5vm;
+        font-size: 1vm;
       }
 
       .slider-button {
@@ -255,7 +322,6 @@
       &:hover {
         background-color: #ffffff;
         transition: background-color .5s;
-
         h3 > div {
           width: 100%;
         }
@@ -281,16 +347,16 @@
       @include self_icon;
 
       &::before {
-        left: 49.9%;
+        left: 49.8%;
         top: 174%;
-        width: 43px;
+        width: 40px;
       }
 
       &::after {
-        height: 22px;
+        height: 20px;
         left: 50%;
         top: 140%;
-        width: 22px;
+        width: 19px;
       }
     }
 
@@ -331,7 +397,7 @@
             }
             .product-content{
               color: #3F3F3F;
-              height: 10vm;
+              font-size: 1em;
             }
           }
         }
@@ -341,7 +407,7 @@
   }
 
   .home-friends {
-    margin-top: 5%;
+    margin-top: 2%;
     height: 35vh;
     padding: 20px 0;
     background: url(../../../static/img/head-view/clients-bg.jpg);
@@ -386,7 +452,7 @@
 
       ul {
         display: flex;
-        margin-top: 5%;
+        margin-top: 2%;
         position: absolute;
         margin-left: 42%;
         margin-right: 42%;

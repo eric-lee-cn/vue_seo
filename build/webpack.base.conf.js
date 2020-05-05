@@ -84,3 +84,11 @@ module.exports = {
     child_process: 'empty'
   }
 }
+//引入jquery
+const webpack = require('webpack')
+plugins:[
+  new webpack.ProvidePlugin({
+    $: "jquery",
+    jQuery: "jquery"
+  }),
+]
